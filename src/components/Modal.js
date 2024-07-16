@@ -3,9 +3,7 @@ import './style.css';
 
 const Modal = ({ currentItem, textContent, setTextContent, onClose }) => {
   const [headingText, setHeadingText] = useState(currentItem.heading);
-  console.log("headingText", headingText)
   const [paragraphText, setParagraphText] = useState(currentItem.paragraph);
-  console.log("paragraphText", paragraphText)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
