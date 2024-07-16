@@ -1,3 +1,83 @@
 .scroll-container::-webkit-scrollbar {
    display: none;
  }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+
+  position: relative;
+  width: 30%;
+}
+
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-border{
+  margin-top: 10px;
+  border-bottom: 1px solid rgb(15, 14, 14);
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-content{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.input-placeholder{
+  padding: 3px;
+  outline: none;
+  border: 1px solid black;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.submit-btn{
+  margin-top: 10px;
+  padding: 10px;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+/* Basic responsiveness */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 50%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .modal-content {
+    width: 50%; 
+  }
+}
