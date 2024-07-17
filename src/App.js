@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FeedbackSection from "./components/FeedbackSection";
 import GetStarted from "./components/GetStarted";
 import Header from "./components/Header";
@@ -12,12 +13,25 @@ function App() {
     <div>
       <Header />
       <Home />
-      <Notification isAdmin={true}/>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/admin" element={<Notification isAdmin={true}/>}></Route>
+          <Route path="/" element={<Notification isAdmin={false}/>}></Route>
+        </Routes>
+      </BrowserRouter>
+      
       <Instruction />
       <SelfImprovement />
       <FeedbackSection />
       <GetStarted />
-      <OpenVacancies isAdmin={true} />
+      
+      <BrowserRouter>
+        <Routes>
+          <Route path="/admin" element={<OpenVacancies isAdmin={true}/>} />
+          <Route path="/" element={<OpenVacancies isAdmin={false}/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
