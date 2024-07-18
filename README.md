@@ -17,7 +17,7 @@ This repository contains the source code for a landing page implemented with Rea
 ## Installation and Setup
 1. Clone the repository:
    ```bash
-   https://github.com/royabhi647/animated-page.git
+   git clone https://github.com/royabhi647/animated-page.git
    cd animated-page
 
 2. Install dependencies using npm:
